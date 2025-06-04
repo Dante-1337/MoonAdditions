@@ -34,6 +34,9 @@ class VehicleRenderer : public Singleton<VehicleRenderer>
 	{
 		MaterialProperties() :
 			_color{ 0, 0, 0, 0 },
+			_ambient(0.5f),
+			_diffuse(1.0f),
+			_specular(1.0f),
 			_recolor(false),
 			_retexture(false),
 			_reAmbient(false),
@@ -41,6 +44,9 @@ class VehicleRenderer : public Singleton<VehicleRenderer>
 			_reSpecular(false),
 			_originalColor{ 0, 0, 0, 0 },
 			_originalTexture(nullptr),
+			_originalAmbient(0.5f),
+			_originalDiffuse(1.0f),
+			_originalSpecular(1.0f),
 			_originalGeometryFlags(0),
 			_geometry(nullptr)
 		{
